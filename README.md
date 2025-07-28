@@ -7,12 +7,13 @@ This repository contains the tasks for the **UNICEF Data and Analytics technical
 
 
 ## Repository Structure:
-
+```text
 src/
 └── consultancy_assessment/
     ├── data/                           # Raw data files
     │   └── 01_rawdata/
-    │       └── GLOBAL_DATAFLOW_2018-2022.xlsx
+    |   |
+    │   └── GLOBAL_DATAFLOW_2018-2022.xlsx
     ├── documentation/                 # Project documentation
     │   ├── consultancy_assessment_report.docx
     │   └── population_weighted_coverage.png
@@ -32,8 +33,7 @@ CONTRIBUTING.md                        # Instructions to configure the enviremen
 LICENSE
 pyproject.toml
 README.md
-
-
+```
 
 ---
 
