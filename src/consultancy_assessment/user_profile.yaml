@@ -1,0 +1,4 @@
+global_dataflow_file_path: src\consultancy_assessment\data\GLOBAL_DATAFLOW_2018-2022.xlsx
+raw_data_file_path: 
+  - src\consultancy_assessment\data\01_rawdata\On-track and off-track countries.xlsx
+  - src\consultancy_assessment\data\01_rawdata\WPP2022_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT_REV1.xlsx
