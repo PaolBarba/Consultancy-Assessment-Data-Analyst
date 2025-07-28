@@ -89,7 +89,7 @@ class ConsultancyAssessment:
         """Compute population-weighted coverage grouped by Status and Indicator."""
         result = (
             self.merged_data
-            .groupby(["Status.U5MR", "Indicator"])
+            .groupby(["Status.U5MR", "Indicator"], group_keys=False)
             .apply(lambda x: np.average(x["MostRecentEstimate"], weights=x["BirthsThousands"]))
             .reset_index(name="PopulationWeightedCoverage")
         )
@@ -104,8 +104,9 @@ class ConsultancyAssessment:
         # Set figure size
         plt.figure(figsize=(12, 7))
 
-        # Use a modern color palette
-        palette = sns.color_palette("Set2")
+        # Use a modern color palette sized to the number of unique indicators
+        unique_indicators = data["Indicator"].nunique()
+        palette = sns.color_palette("Set2", n_colors=unique_indicators)
 
         # Create the barplot
         sns.barplot(
@@ -113,8 +114,8 @@ class ConsultancyAssessment:
             y="PopulationWeightedCoverage",
             hue="Indicator",
             data=data,
-            palette=palette,
-            edgecolor="black"
+            edgecolor="black",
+            palette=palette
         )
 
         # Titles and labels

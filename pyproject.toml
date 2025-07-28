@@ -14,8 +14,6 @@ dependencies = [
   "openpyxl",
   "matplotlib",
   "seaborn",
-  "weasyprint",
-  "jinja2",
   "python-docx"
  
 ]

@@ -4,11 +4,11 @@
 
 1. Clone the repository:
    ```shell
-   git clone <repo_ssh_address>
+   git clone https://github.com/PaolBarba/Consultancy-Assessment-Data-Analyst.git
    ```
 2. Switch to the project directory:
    ```shell
-    cd <project_name>
+    cd Consultancy-Assessment-Data-Analyst
     ```
 3. Create a virtual environment.
 
